@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<script>
+function startRecording(){
+const Http = new XMLHttpRequest();
+const url='https://putsreq.com/DbMAUK0QJi0u3DOA6QpM';
+
+Http.open("POST", url);
+Http.setRequestHeader("Content-Type", "application/json");
+var data = JSON.stringify({"record":"start"});
+Http.send(data);
+Http.onreadystatechange=(e)=>{
+console.log(Http.responseText)
+}
+};
+function stopRecording(){
+const Http = new XMLHttpRequest();
+const url='https://putsreq.com/DbMAUK0QJi0u3DOA6QpM';
+
+Http.open("POST", url);
+Http.setRequestHeader("Content-Type", "application/json");
+var data = JSON.stringify({"record":"s"});
+Http.send(data);
+Http.onreadystatechange=(e)=>{
+console.log(Http.responseText)
+}
+};
+</script>
+
+<style> 
+#start {
+ 
+  text-align: center;
+
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+#stop {
+  text-align: center;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+#run {
+  text-align: center;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#start:active {
+
+  margin: 0 auto;
+  width: 50%;
+  border: 3px solid red;
+  padding: 10px;
+
+}
+#stop:active {
+
+  margin: 0 auto;
+  width: 50%;
+  border: 3px solid red;
+  padding: 10px;
+
+}	
+#link {
+  color: lightblue;
+}	
+</style>
+<h1 style="text-align:center;">EasyIR</h1>
+<div style="text-align:center;">
+	
+	<input id="start" type="button" value="Start Recording" onclick="startRecording();" />
+	<input id="stop" type="button" value="Stop Recording" onclick="stopRecording();" />
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 style="text-align:center">Enter code below, instructions and formatting guide can be found <a id="link" href="https://www.google.com">here</a></h1>
+<textarea  rows="18" cols="100">
+</textarea> 
+<br>
+<br>
+<br>
+<input id="run" type="button" value="Run Code" onclick="stopRecording();" />
+</div>
+
