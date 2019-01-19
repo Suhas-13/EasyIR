@@ -107,15 +107,47 @@ body {
   padding: 25px;
 }
 #run {
-  text-align: center;
-  background: linear-gradient(to left, #1488cc, #2b32b2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-  font-size: 25px;
-  color: white;
-  font-weight: bold;
-  width: 50%;
-  padding: 25px;
+	-moz-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	-webkit-box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #768d87), color-stop(1, #6c7c7c));
+	background:-moz-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-webkit-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-o-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:-ms-linear-gradient(top, #768d87 5%, #6c7c7c 100%);
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#768d87', endColorstr='#6c7c7c',GradientType=0);
+	background-color:#768d87;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:11px 23px;
+	text-decoration:none;
+	text-shadow:0px -1px 0px #2b665e;
+}
+#run:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #6c7c7c), color-stop(1, #768d87));
+	background:-moz-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-webkit-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-o-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:-ms-linear-gradient(top, #6c7c7c 5%, #768d87 100%);
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#6c7c7c', endColorstr='#768d87',GradientType=0);
+	background-color:#6c7c7c;
+}
+#run:active {
+	position:relative;
+	top:1px;
 }
 
+        
 #start:active {
 
   background-color: #3e8e41;
@@ -163,8 +195,7 @@ text-transform: none;">Easy IR</h1>
 	<br>
 
 	<input id="stop" type="button" value="Stop Recording" onclick="stopRecording();" />
-<br>
-<br>
+
 <br>
 <br>
 <br>
@@ -178,7 +209,10 @@ font-weight: 700;
 text-decoration: none solid rgb(68, 68, 68);
 font-style: normal;
 font-variant: small-caps;
-text-transform: none;">Enter code below, instructions and formatting guide can be found <a style="id="link" href="https://www.google.com" target="_blank">here</a></h1>
+text-transform: none;">Enter code below, instructions and formatting guide can be found <a style="id="link" href="https://github.com/insertcustomname/EasyIR/blob/master/README.md" target="_blank">here</a></h1>
+<br>
+<br>
+<br>
 <textarea style="font-size: 25px;background-color:#02516d;color:white"id="codefield" rows="13" cols="60">
 </textarea> 
 <br>
