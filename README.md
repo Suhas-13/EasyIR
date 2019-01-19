@@ -5,7 +5,7 @@
 First record the IR Codes for the device you wish to use.
 You can do this by pressing the "Start Recording" button found on our webpage, specify a name of your choice and then pointing the device's remote at the rasberry pie and repeatedly pressing the button for a period of ~10 seconds, after this is done please press the "Stop Recording" button on the website.
 
-## Next once you have the file saved you will need to run Easy IR 
+## Next once you have the file saved you will need to program and run Easy IR 
 
 To do this you will need to use our "programming interface", the interface accepts several different commands to help make your life easier.
 
