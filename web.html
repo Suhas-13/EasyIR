@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+<script>
+
+function startRecording(){
+    swal({
+        title:"Enter Code name",
+        text: " ",
+        content: "input",
+        buttons: {
+                cancel: true,
+                confirm: "Submit"
+            }
+        }).then( val => {
+            if(val) {
+				const Http = new XMLHttpRequest();
+				const url='https://putsreq.com/DbMAUK0QJi0u3DOA6QpM';
+
+				Http.open("POST", url);
+				Http.setRequestHeader("Content-Type", "application/json");
+				var data = JSON.stringify({"record":"start","name":val});
+				Http.send(data);
+				 swal({
+                    title: "Recording!",
+                    icon: "success"
+                });
+				
+
+	
+				
+               
+				
+					
+			};
+			
+			
+        });
+    
+
+
+
+
+};
+function stopRecording(){
+const Http = new XMLHttpRequest();
+const url='https://putsreq.com/DbMAUK0QJi0u3DOA6QpM';
+
+Http.open("POST", url);
+Http.setRequestHeader("Content-Type", "application/json");
+var data = JSON.stringify({"record":"stop"});
+Http.send(data);
+Http.onreadystatechange=(e)=>{
+swal({
+                    title: "Stopped Recording!",
+                    icon: "success"
+                });
+
+}
+};
+function run(){
+const Http = new XMLHttpRequest();
+const url='https://putsreq.com/DbMAUK0QJi0u3DOA6QpM';
+
+Http.open("POST", url);
+Http.setRequestHeader("Content-Type", "application/json");
+var data = JSON.stringify({"code":document.getElementById("codefield").value});
+Http.send(data);
+Http.onreadystatechange=(e)=>{
+console.log(Http.responseText)
+swal({
+                    title: "Code Running!",
+                    icon: "success"
+                });
+
+}
+};
+</script>
+
+<style> 
+body {
+    background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%);
+	
+}
+
+#start {
+ 
+  text-align: center;
+
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+#stop {
+  text-align: center;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+#run {
+  text-align: center;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
+}
+
+#start:active {
+
+  margin: 0 auto;
+  width: 50%;
+  border: 3px solid red;
+  padding: 10px;
+
+}
+#stop:active {
+
+  margin: 0 auto;
+  width: 50%;
+  border: 3px solid red;
+  padding: 10px;
+
+}	
+#link {
+  color: lightblue;
+}	
+#run:active {
+
+  margin: 0 auto;
+  width: 50%;
+  border: 3px solid red;
+  padding: 10px;
+
+
+
+
+</style>
+
+<body>
+</div> 
+<h1 style="text-align:center;">EasyIR</h1>
+<div style="text-align:center;" id="main">
+	
+	<input id="start" type="button" value="Start Recording" onclick="startRecording();" />
+	<br>
+	<br>
+
+	<input id="stop" type="button" value="Stop Recording" onclick="stopRecording();" />
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h2 style="text-align:center">Enter code below, instructions and formatting guide can be found <a id="link" href="https://www.google.com">here</a></h1>
+<textarea id="codefield" rows="18" cols="100">
+</textarea> 
+<br>
+<br>
+<br>
+<input id="run" type="button" value="Run Code" onclick="run();" />
+</div>
+
+</body>
+</html>
