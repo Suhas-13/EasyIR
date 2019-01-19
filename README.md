@@ -19,9 +19,12 @@ All lines of code MUST be run on different individual lines where the command(ru
 
 Code will look something like this:
 
-wait 3\n
+wait 3
+
 run lightsOn 3 
+
 repeat 3
+
 After you have written your program you can run it with the "Run Code" button. 
 
 When the code is done running it will popup to alert you. 
