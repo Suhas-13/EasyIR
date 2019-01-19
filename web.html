@@ -16,11 +16,13 @@ function startRecording(){
         }).then( val => {
             if(val) {
 				const Http = new XMLHttpRequest();
-				const url='https://putsreq.com/DbMAUK0QJi0u3DOA6QpM';
+				const url='http://localhost:8080/endpoint';
 
-				Http.open("POST", url);
-				Http.setRequestHeader("Content-Type", "application/json");
-				var data = JSON.stringify({"record":"start","name":val});
+
+				Http.open("POST", url,true);
+				Http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+				var data = ("record=start&name="+val);
 				Http.send(data);
 				 swal({
                     title: "Recording!",
@@ -45,11 +47,12 @@ function startRecording(){
 };
 function stopRecording(){
 const Http = new XMLHttpRequest();
-const url='https://putsreq.com/DbMAUK0QJi0u3DOA6QpM';
+const url='http://localhost:8080/endpoint';
 
-Http.open("POST", url);
-Http.setRequestHeader("Content-Type", "application/json");
-var data = JSON.stringify({"record":"stop"});
+Http.open("POST", url,true);
+Http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+var data = "record=stop";
 Http.send(data);
 Http.onreadystatechange=(e)=>{
 swal({
@@ -61,16 +64,17 @@ swal({
 };
 function run(){
 const Http = new XMLHttpRequest();
-const url='https://putsreq.com/DbMAUK0QJi0u3DOA6QpM';
+const url='http://localhost:8080/endpoint';
 
 Http.open("POST", url);
-Http.setRequestHeader("Content-Type", "application/json");
-var data = JSON.stringify({"record":"run","code":document.getElementById("codefield").value});
+Http.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+
+var data = ("record=run&code=" + document.getElementById("codefield").value);
 Http.send(data);
 Http.onreadystatechange=(e)=>{
 console.log(Http.responseText)
 swal({
-                    title: "Code Running!",
+                    title: "Code Completed!",
                     icon: "success"
                 });
 
@@ -151,7 +155,7 @@ body {
 <br>
 <br>
 <br>
-<br>
+<br> 
 <h2 style="text-align:center">Enter code below, instructions and formatting guide can be found <a id="link" href="https://www.google.com">here</a></h1>
 <textarea id="codefield" rows="18" cols="100">
 </textarea> 
