@@ -6,7 +6,7 @@
 
 function startRecording(){
     swal({
-        title:"Enter Code name",
+        title:"Enter Code Name",
         text: " ",
         content: "input",
         buttons: {
@@ -84,56 +84,60 @@ swal({
 
 <style> 
 body {
-    background: linear-gradient(to bottom, rgba(30,87,153,0) 0%,rgba(30,87,153,0.8) 15%,rgba(30,87,153,1) 19%,rgba(30,87,153,1) 20%,rgba(41,137,216,1) 50%,rgba(30,87,153,1) 80%,rgba(30,87,153,1) 81%,rgba(30,87,153,0.8) 85%,rgba(30,87,153,0) 100%);
-	
+  background: linear-gradient(to left, #bbd2c5, #536976); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #start {
  
   text-align: center;
-
+  background: linear-gradient(to bottom, #2b5876, #4e4376); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 25px;
+  color: white;
   width: 50%;
-  border: 3px solid green;
-  padding: 10px;
+  font-weight: bold;
+  padding: 25px;
 }
 #stop {
   text-align: center;
+  background: linear-gradient(to bottom, #2b5876, #4e4376); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
   width: 50%;
-  border: 3px solid green;
-  padding: 10px;
+  padding: 25px;
 }
 #run {
   text-align: center;
+  background: linear-gradient(to left, #1488cc, #2b32b2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  font-size: 25px;
+  color: white;
+  font-weight: bold;
   width: 50%;
-  border: 3px solid green;
-  padding: 10px;
+  padding: 25px;
 }
 
 #start:active {
 
-  margin: 0 auto;
-  width: 50%;
-  border: 3px solid red;
-  padding: 10px;
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 
 }
 #stop:active {
 
-  margin: 0 auto;
-  width: 50%;
-  border: 3px solid red;
-  padding: 10px;
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 
 }	
 #link {
-  color: lightblue;
+  color: darkblue;
 }	
 #run:active {
 
-  margin: 0 auto;
-  width: 50%;
-  border: 3px solid red;
-  padding: 10px;
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
 
 
 
@@ -142,7 +146,16 @@ body {
 
 <body>
 </div> 
-<h1 style="text-align:center;">EasyIR</h1>
+<h1 style="text-align:center;font-family: Verdana, Geneva, sans-serif;
+font-size: 55px;
+letter-spacing: 1.4px;
+word-spacing: 4.6px;
+color: #000000;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: small-caps;
+text-transform: none;">Easy IR</h1>
 <div style="text-align:center;" id="main">
 	
 	<input id="start" type="button" value="Start Recording" onclick="startRecording();" />
@@ -156,8 +169,17 @@ body {
 <br>
 <br>
 <br> 
-<h2 style="text-align:center">Enter code below, instructions and formatting guide can be found <a id="link" href="https://www.google.com">here</a></h1>
-<textarea id="codefield" rows="18" cols="100">
+<h2 style="text-align:center font-family: Verdana, Geneva, sans-serif;
+font-size: 29px;
+letter-spacing: 1.4px;
+word-spacing: 4.6px;
+color: #000000;
+font-weight: 700;
+text-decoration: none solid rgb(68, 68, 68);
+font-style: normal;
+font-variant: small-caps;
+text-transform: none;">Enter code below, instructions and formatting guide can be found <a style="id="link" href="https://www.google.com" target="_blank">here</a></h1>
+<textarea style="font-size: 25px;background-color:#02516d;color:white"id="codefield" rows="13" cols="60">
 </textarea> 
 <br>
 <br>
