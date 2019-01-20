@@ -1,4 +1,5 @@
 # EasyIR
+Controlling IR Appliances just got easier.
 
 # How to use Easy IR
 
@@ -27,5 +28,6 @@ After you have written your program you can run it with the "Run Code" button.
 
 When the code is done running it will popup to alert you. 
 
+NOTE: NO IR CODES AR PROVIDED
 
 ### Thank you for reading this guide and we hope you found it useful.
