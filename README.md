@@ -1,5 +1,7 @@
 # EasyIR
-Controlling IR Appliances just got easier.
+Controlling IR Appliances just got easier. 
+
+Note: I will be uploading the schematic for the arduino circuit at a later time.
 
 # How to use Easy IR
 
