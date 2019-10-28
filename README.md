@@ -2,7 +2,7 @@
 
 EasyIR by Suhas Hariharan and Shourjo Chakravathy.
 
-https://insertcustomname.github.io/EasyIR/ (Demo website, in order to use need to install and setup flask server, host the HTML with updated endpoints)
+https://insertcustomname.github.io/EasyIR/ (Demo website, in order to use, you need to install and setup the flask server, host the HTML with updated endpoints and setup the arduino circuits.)
 
 Controlling IR Appliances just got easier. 
 
