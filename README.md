@@ -11,7 +11,7 @@ Note: I will be uploading the schematic for the arduino circuit at a later time.
 # How to use Easy IR
 
 First record the IR Codes for the device you wish to use.
-You can do this by pressing the "Start Recording" button found on our webpage, specify a name of your choice and then pointing the device's remote at the rasberry pie and repeatedly pressing the button for a period of ~12-15 seconds.
+You can do this by pressing the "Start Recording" button found on our webpage, specify a name of your choice and then pointing the device's remote at the arduino board and repeatedly pressing the button for a period of ~12-15 seconds.
 
 ## Next once you have the file saved you will need to program and run Easy IR 
 
@@ -34,7 +34,5 @@ repeat 3
 After you have written your program you can run it with the "Run Code" button. 
 
 When the code is done running it will popup to alert you. 
-
-NOTE: NO IR CODES AR PROVIDED
 
 ### Thank you for reading this guide and we hope you found it useful.
