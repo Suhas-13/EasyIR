@@ -8,6 +8,8 @@ Controlling IR Appliances just got easier.
 
 Note: I will be uploading the schematic for the arduino circuit at a later time.
 
+EasyIR allows individuals to take control of their IR controllable devices in new ways, with a programmable environment developed by us.
+
 # How to use Easy IR
 
 First record the IR Codes for the device you wish to use.
