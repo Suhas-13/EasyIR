@@ -16,7 +16,7 @@ function startRecording(){
         }).then( val => {
             if(val) {
 				const Http = new XMLHttpRequest();
-				const url='http://localhost:8080/endpoint';
+				const url='http://localhost:8080/endpoint/';
 
 
 				Http.open("POST", url,true);
